@@ -2,104 +2,229 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title id="page-title">Loading...</title> <!-- Dynamically set title -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css"/>
-    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/default.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title id="page-title">Loading...</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css" />
+  <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/default.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/css/style.css" rel="stylesheet">
+
+  <!-- === CYBER NEON THEME (SAFE ADDON) === -->
+  <style>
+    body.dark-mode {
+      background-color: #05010f !important;
+      color: #e0e0ff !important;
+      font-family: "Rajdhani", sans-serif !important;
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, #0a0a1f, #05010f) !important;
+      border-right: 2px solid rgba(0, 255, 255, 0.15);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    }
+
+    .sidebar-brand-text,
+    #config-name {
+      color: #00fff2 !important;
+      font-weight: 700;
+      text-shadow: 0 0 8px #00fff2;
+    }
+
+    .navbar {
+      background: linear-gradient(90deg, #05010f, #0a0015) !important;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    }
+
+    .card {
+      background: rgba(10, 10, 25, 0.8) !important;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      border-radius: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .card-title,
+    #welcome-title {
+      color: #00fff2 !important;
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+    }
+
+    .stats-title {
+      color: #ff33f5 !important;
+      letter-spacing: 1px;
+    }
+
+    .stats-value,
+    #totalApis,
+    #apiCategories {
+      color: #00fff2 !important;
+      font-size: 1.3rem !important;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    }
+
+    .card-icon {
+      font-size: 2rem !important;
+      color: #ff33f5 !important;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      text-shadow: 0 0 10px rgba(255, 51, 245, 0.7);
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      from {
+        opacity: 0.8;
+        text-shadow: 0 0 8px #00fff2;
+      }
+
+      to {
+        opacity: 1;
+        text-shadow: 0 0 20px #ff33f5;
+      }
+    }
+
+    footer.sticky-footer {
+      background: transparent !important;
+      border-top: 1px solid rgba(0, 255, 255, 0.1);
+      color: #b0b0ff !important;
+    }
+
+    footer.sticky-footer a {
+      color: #00fff2 !important;
+      text-decoration: none;
+    }
+
+    footer.sticky-footer a:hover {
+      color: #ff33f5 !important;
+      text-shadow: 0 0 8px #ff33f5;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00fff2, #ff33f5);
+      border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a1f;
+    }
+
+    .img-profile {
+      border: 2px solid #00fff2 !important;
+      box-shadow: 0 0 10px #00fff2;
+      transition: 0.3s ease;
+    }
+
+    .img-profile:hover {
+      box-shadow: 0 0 20px #ff33f5;
+      border-color: #ff33f5;
+    }
+
+    .text-primary-custom {
+      color: #00fff2 !important;
+    }
+  </style>
 </head>
 
 <body id="page-top" class="dark-mode">
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-            <div class="sidebar-brand d-flex align-items-center justify-content-center">
-                <div class="sidebar-brand-text mx-3 text-primary-custom" id="config-name">Loading...</div> <!-- New placeholder for config name -->
-            </div>
-            <hr class="sidebar-divider my-0">
-            <!-- Dynamic sidebar items will be inserted here by JavaScript -->
-        </ul>
-        <!-- Sidebar -->
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <!-- TopBar -->
-                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
-                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <ul class="navbar-nav ml-auto">
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                                <img class="img-profile rounded-circle" id="profile-photo" src="https://i.imgur.com/xwCoQ5H.jpeg" style="width: 40px; height: 40px;"> <!-- Default image replaced dynamically -->
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Topbar -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <div class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="sidebar-brand-text mx-3 text-primary-custom" id="config-name">Loading...</div>
+      </div>
+      <hr class="sidebar-divider my-0">
+    </ul>
 
-                <!-- Container Fluid-->
-                <div class="container-fluid" id="container-wrapper">
-                    <!-- Welcome Card -->
-                    <div class="row">
-                        <div class="col-xl-12 col-md-12 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h2 class="card-title text-primary-custom mb-4" id="welcome-title">Loading...</h2> <!-- Dynamically set welcome message -->
-                                    <p class="mb-0">Explore our APIs by clicking on the categories in the sidebar to find the one you need.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- API Stats Cards -->
-                    <div class="row">
-                        <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h6 class="stats-title" style="font-size: 0.8rem;">AVAILABLE ENDPOINTS</h6>
-                                    <p class="stats-value mb-0" id="totalApis" style="font-size: 1.2rem;">Loading...</p>
-                                    <i class="fas fa-server card-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h6 class="stats-title" style="font-size: 0.8rem;">CATEGORIES</h6>
-                                    <p class="stats-value mb-0" id="apiCategories" style="font-size: 1.2rem;">Loading...</p>
-                                    <i class="fas fa-list-alt card-icon"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <img class="img-profile rounded-circle" id="profile-photo" src="https://i.imgur.com/xwCoQ5H.jpeg"
+                  style="width: 40px; height: 40px;">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="row">
+            <div class="col-xl-12 col-md-12 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h2 class="card-title text-primary-custom mb-4" id="welcome-title">Loading...</h2>
+                  <p class="mb-0">Explore our APIs by clicking on the categories in the sidebar to find the one you
+                    need.</p>
                 </div>
-                <!---Container Fluid-->
+              </div>
             </div>
-            <!-- Footer -->
-            <footer class="sticky-footer">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        Made with <i class="fa fa-heart faa-flash animated"></i> by
-                        <a href="https://github.com/ajirodesu" target="_blank" style="color: #3b82f6;">Lance Ajiro</a>
-                    </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-6 col-md-6 mb-4">
+              <div class="card h-100 position-relative">
+                <div class="card-body">
+                  <h6 class="stats-title" style="font-size: 0.8rem;">AVAILABLE ENDPOINTS</h6>
+                  <p class="stats-value mb-0" id="totalApis" style="font-size: 1.2rem;">Loading...</p>
+                  <i class="fas fa-server card-icon"></i>
                 </div>
-            </footer>
-            <!-- Footer -->
+              </div>
+            </div>
+            <div class="col-xl-6 col-md-6 mb-4">
+              <div class="card h-100 position-relative">
+                <div class="card-body">
+                  <h6 class="stats-title" style="font-size: 0.8rem;">CATEGORIES</h6>
+                  <p class="stats-value mb-0" id="apiCategories" style="font-size: 1.2rem;">Loading...</p>
+                  <i class="fas fa-list-alt card-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/js/ruang-admin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/dono.js"></script>
+      <!-- Footer -->
+      <footer class="sticky-footer">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            Made with <i class="fa fa-heart faa-flash animated"></i> by
+            <a href="https://github.com/ajirodesu" target="_blank">Lance Ajiro</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/js/ruang-admin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/lanceajiro/Jiro-Assets@refs/heads/main/dono.js"></script>
 </body>
 
 </html>
